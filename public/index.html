@@ -3,27 +3,97 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
+    <!-- Import google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+
+    <!-- Import font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/_main.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <!-- Import Counter -->
+    <script src="/scripts/composer-char-counter.js"></script>
+
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+
+    <!-- Import timeago -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
   </head>
 
-  <body>
+  <body>  
     <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
+    <nav>                
+      <div class="align-items-end">
+        <span style="font-family: 'Bungee', cursive;">tweeter</span> 
+      </div>
+      <div class="container">
+        <span>
+          <b>Write</b> a new tweet
+        </span>
+        <i class="fas fa-angle-double-down" style="color: red;"></i>
+      </div>
     </nav>
 
+    <div class="container">
+      <img src="./images/profile-hex.png">
+      <div>
+          <h2>Your Name</h2>
+      </div>
+    </div>
+
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form method="POST" action="/tweets">
+
+          <label for="tweet-text"></label>
+          <textarea name="text" placeholder="What are you humming about?" id="tweet-text"></textarea>
+          <div class="inline-mt">
+            <div>
+              <button id="tweet-btn" type="submit">Tweet</button>
+            </div>         
+            <output class="counter">140</output>    
+          </div>
+        </form>
+      </section>
+      
+      <br>
+      <article class="tweet">
+        <header>       
+          <div class="inline">              
+            <img src="images/face-transparent.png" height="75" alt="face">        
+            <label class="title">Smiley</label>       
+          </div>     
+            <label><b>@Sirlsaac</b></label>    
+        </header>
+
+        <div class="tweet-content">
+          <textarea id="tweet-message"></textarea>
+        </div>
+
+        <footer>
+          <small>
+          10 days ago
+          </small>
+          <span class="icon-group">
+            <i class="fa fa-flag" aria-hidden="true"></i>
+            <i class="fa fa-retweet" aria-hidden="true"></i>
+            <i class="fa fa-heart" aria-hidden="true"></i>
+          </span>
+        </footer>
+      </article>
+    </main>
   </body>
 </html>

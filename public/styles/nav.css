@@ -1,0 +1,13 @@
+nav {
+  display: flex;
+  height: 120px;
+  width: 100vw;
+  background: linear-gradient(to bottom, #168b72, #003b2f);
+  color: #FFFFFF;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 1em;
+  padding-bottom: 0.6em;
+}
