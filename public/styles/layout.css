@@ -17,15 +17,16 @@ body {
   background-color: #505657;
   background-image: url("https://www.transparenttextures.com/patterns/classy-fabric.png");
   font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
-  width: 100vw;
+  font-family: "demos-next",sans-serif;
+  width: 100%;
 }
 
 main {
   display: flex;
-  flex-direction: row;
+  margin-top: 120px;
   justify-content: center;
-  width: 100vw;
+  align-items: center;
+  width: 90%;
 }
 
 textarea {
@@ -35,63 +36,17 @@ textarea {
   border-bottom: 2px inset black;
 }
 
-article {
-  display: flex;
-  flex-direction: column;
-  background-image: url('../images/transparent-square-tiles.png');
-  background-color: #374a59;
-  width: 75vw;
-  margin: 10px;
-  padding: 10px;
-  border: 2px solid #168b72;
-  box-shadow: 0 0px 3px #adc4bf, 0 1px 2px rgba(255, 248, 248, 0.24);
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-article.tweet:hover {
-  box-shadow: 12px 10px 14px -7px #c0f6ea, 0 10px 10px rgba(0,0,0,0.22);
-}
-
-header {
-  display: flex;
-  align-items: center;
-  padding-right: 1em;
-  padding-top: 0.5em;
-  width: 100%;
-  justify-content: space-between;
-  padding-bottom: 1em;
-}
-
-footer {
-  display: block;
-  flex-direction: column;
-}
-
-.icon-group {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.title {
-  padding-left: 15px;
-}
-
-img {
-  padding-left: 1em;
+section {
+  margin: 1em;
 }
 
 .container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 5px;
-}
-
-.user {
-  display: inline-flex;
-  justify-content: space-between;
-  width: 100%;
-
+  padding-left: 10%;
 }
 
 .inline {

@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/gsr1yiz.css">
 
     <!-- Import font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -34,9 +35,7 @@
   <body>  
     <!-- Top nav bar (fixed) -->
     <nav>                
-      <div class="align-items-end">
-        <span style="font-family: 'Bungee', cursive;">tweeter</span> 
-      </div>
+      <span style="font-family: 'Bungee', cursive;">tweeter</span> 
       <div class="container">
         <span>
           <b>Write</b> a new tweet
@@ -45,12 +44,6 @@
       </div>
     </nav>
 
-    <div class="container">
-      <img src="./images/profile-hex.png">
-      <div>
-          <h2>Your Name</h2>
-      </div>
-    </div>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
@@ -58,8 +51,7 @@
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets">
 
-          <label for="tweet-text"></label>
-          <textarea name="text" placeholder="What are you humming about?" id="tweet-text"></textarea>
+          <textarea name="text" placeholder="What are you humming about?" class="tweet-text"></textarea>
           <div class="inline-mt">
             <div>
               <button id="tweet-btn" type="submit">Tweet</button>
@@ -70,30 +62,10 @@
       </section>
       
       <br>
-      <article class="tweet">
-        <header>       
-          <div class="inline">              
-            <img src="images/face-transparent.png" height="75" alt="face">        
-            <label class="title">Smiley</label>       
-          </div>     
-            <label><b>@Sirlsaac</b></label>    
-        </header>
 
-        <div class="tweet-content">
-          <textarea id="tweet-message"></textarea>
-        </div>
+        
+      <div id="tweets-container"></div>
 
-        <footer>
-          <small>
-          10 days ago
-          </small>
-          <span class="icon-group">
-            <i class="fa fa-flag" aria-hidden="true"></i>
-            <i class="fa fa-retweet" aria-hidden="true"></i>
-            <i class="fa fa-heart" aria-hidden="true"></i>
-          </span>
-        </footer>
-      </article>
     </main>
   </body>
 </html>

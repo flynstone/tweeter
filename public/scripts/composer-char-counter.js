@@ -1,16 +1,16 @@
 $(document).ready(function() {
   $('textarea').on('input', function (event) {
-    let len = $(this).val().length
+    let val = $(this).val().length
     let $counter= $(this).parent('form').find('.counter')
-    counting($counter, len)
+    counting($counter, val)
   })
 })
 
-function counting($counter, len) {
-  let charsLeft = 140 - len
-  $counter.text(charsLeft)
+function counting($counter, val) {
+  let count = 140 - val
+  $counter.text(count)
   $counter.css('color', 'floralwhite')
-  if (charsLeft < 0) {
+  if (count < 0) {
     $counter.css('color', 'red')
   }
 }
