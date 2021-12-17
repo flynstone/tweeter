@@ -49,12 +49,11 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form method="POST" action="/tweets">
-
-          <textarea name="text" placeholder="What are you humming about?" class="tweet-text"></textarea>
+        <form method="POST" action="/tweets" class="add-tweet">
+          <textarea name="text" placeholder="What are you humming about?" required></textarea>
           <div class="inline-mt">
             <div>
-              <button id="tweet-btn" type="submit">Tweet</button>
+              <button type="submit" id="tweet-btn">Tweet</button>
             </div>         
             <output class="counter">140</output>    
           </div>
@@ -64,7 +63,7 @@
       <br>
 
         
-      <div id="tweets-container"></div>
+      <section class="tweets-container"></section>
 
     </main>
   </body>
