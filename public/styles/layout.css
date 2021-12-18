@@ -15,62 +15,51 @@ body {
   flex-direction: column;
   color: floralwhite;
   background-color: #505657;
-  background-image: url("https://www.transparenttextures.com/patterns/classy-fabric.png");
   font-size: 24px;
   font-family: "demos-next",sans-serif;
-  width: 100%;
+  background-image: url("https://www.transparenttextures.com/patterns/classy-fabric.png");
 }
 
-main {
+
+.profile {
   display: flex;
-  margin-top: 120px;
-  justify-content: center;
+  height: 480px;
+  min-width: 480px;
+  flex-direction: column;
+  padding: 1rem;
   align-items: center;
-  width: 90%;
+  justify-content: center;
+  background-color: #5a788f;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  z-index: 5;
 }
 
-textarea {
-  display: block;
-  width: 75vw;
-  background-image: url("../images/whitey.png");
-  border-bottom: 2px inset black;
-}
-
-section {
-  margin: 1em;
-}
 
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
-  padding-left: 10%;
+  width: 90%;
+  margin: 50px auto;
+  position: relative;
+  background-color: inherit;
 }
 
-.inline {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+@media (min-width: 1024px) {
+  .lhl-container {
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: row;
+    z-index: 10;
+    width: 100%;
+    margin: 100px 0 0 50px;
+  }
+
+  .container {
+    margin: 0 100px 100px 100px;
+    flex-grow: 1;
+  }
+  .navbar {
+    background: linear-gradient(to bottom, #168b72, #003b2f);
+  }
 }
 
-.inline-mt {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 0.5em;
-}
 
-.counter {
-  font-weight: bold;
-}
 
-.counter-error {
-  color: tomato;
-}
-
-.tweet-content {
-  display: flex;
-  padding-top: 1em;
-}

@@ -9,17 +9,17 @@
 const createTweetElement = (data) => {
   const $tweet = $(`
   <article class="tweet">              
-    <header>       
+    <header class="tweet-header">       
       <div class="inline">              
-        <img src="${data.user.avatars}" alt="face">        
+        <img src="${data.user.avatars}" class="avatar" alt="face">        
         <label class="title">${data.user.name}</label>       
       </div>     
       <label><b>${data.user.handle}</b></label>    
     </header>
     <div class="tweet-content">
-      <textarea>${data.content.text}</textarea>
+      <p>${escapeFunc(data.content.text)}</p>
     </div>
-    <footer>
+    <footer class="tweet-footer">
       <span class="timeago">${timeago.format(data.created_at)}</span>
       <span class="icon-group">
         <i class="fa fa-flag" aria-hidden="true"></i>
@@ -32,7 +32,7 @@ const createTweetElement = (data) => {
   return $tweet;
 }
 
-const escape = function (str) {
+const escapeFunc = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -42,7 +42,7 @@ const escape = function (str) {
 const renderTweets = (tweets) => {
   tweets = tweets.reverse();
   for (const tweet of tweets) {
-    $('.tweets-container').append(createTweetElement(tweet));
+    $('#tweets-container').append(createTweetElement(tweet));
   }
 }
 
@@ -58,20 +58,18 @@ $(document).ready(function() {
 });
 
 $(document).ready(function () {
-  $('.add-tweet').submit(function (event) {
+  $("form").on("submit", function(event) {
     event.preventDefault();
     const $form = $(this);
     const $postLength = $form.children('textarea').val().length;
 
-    // Front End Validity Checks
-    // Check for an empty field
     if ($postLength === 0) {
-      $form.append($(`<p id='error' class='red'>Text area is empty</p>`))
+      $form.append($(`<p class='tweet-error'>Text area is empty</p>`))
       return;
     }
     // Checks the length
     if ($postLength > 140) {
-      $form.append($(`<p id='error' class='red'>Tweet is more than 140 characters long</p>`))
+      $form.append($(`<p class='tweet-error'>Tweet is more than 140 characters long</p>`))
       return;
     }
 

@@ -3,7 +3,7 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
@@ -33,38 +33,47 @@
   </head>
 
   <body>  
-    <!-- Top nav bar (fixed) -->
-    <nav>                
-      <span style="font-family: 'Bungee', cursive;">tweeter</span> 
-      <div class="container">
+    <nav class="navbar">         
+      <span class="nav-brand">tweeter</span>      
+      <div class="heading">
+        <div class="arrow">
         <span>
           <b>Write</b> a new tweet
         </span>
-        <i class="fas fa-angle-double-down" style="color: red;"></i>
+          <i class="fas fa-angle-double-down" style="color: red;"></i>
+        </div>
+
       </div>
     </nav>
 
+    <div class="lhl-container">
+    <header class="profile">
+      <div>
+        <img src="./images/profile-hex.png">
+      </div>
+
+      <div>
+          <h2>Your Name</h2>
+      </div>
+    </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets" class="add-tweet">
+          <p class="tweet-error"></p>
           <textarea name="text" placeholder="What are you humming about?" required></textarea>
-          <div class="inline-mt">
-            <div>
-              <button type="submit" id="tweet-btn">Tweet</button>
-            </div>         
-            <output class="counter">140</output>    
-          </div>
+          <div class="inline">
+            <button type="submit" class="tweet-btn">Tweet</button>   
+            <output class="counter" for="tweet-text">140</output>        
+          </div>               
+
         </form>
       </section>
-      
-      <br>
 
         
-      <section class="tweets-container"></section>
-
+      <section id="tweets-container"></section>
     </main>
+  </div>
   </body>
 </html>

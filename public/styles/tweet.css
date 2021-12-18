@@ -1,49 +1,69 @@
-#tweets-container {
-  margin: auto;
-  width: 100%;
+.tweet-content p {
+  font-weight: bolder;
+  border-bottom: 2px solid #000;
+  padding: 2.5rem 1rem 1.5rem 1rem;
 }
 
-article {
+.tweet {
   display: flex;
   flex-direction: column;
+  border: 2px solid #000;
+  margin: 3rem 0 3rem 0;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.22);
+  padding: 20px;
   background-image: url('../images/transparent-square-tiles.png');
   background-color: #5a788f;
-  width: 75vw;
-  margin: 1em;
-  padding: 10px;
-  border: 2px solid #168b72;
-  box-shadow: 0 0px 3px #adc4bf, 0 1px 2px rgba(255, 248, 248, 0.24);
-  transition: box-shadow 0.3s ease-in-out;
+}
+
+.tweet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tweet-header div:nth-of-type(1) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tweet-header img {
+  width: 100px;
+  margin-right: 17px;
+}
+.tweet-header span p {
+  font-weight: 300;
+}
+.tweet-header div:nth-of-type(2) {
+  color: #C5CCE3;
+  display: none;
+  transition: all 0.3s ease;
+}
+.tweet-article:hover .tweet-header div:nth-of-type(2) {
+  display: contents;
+  color: #C5CCE3;
 }
 
 article.tweet:hover {
   box-shadow: 12px 10px 14px -7px #c0f6ea, 0 10px 10px rgba(0,0,0,0.22);
 }
 
-header {
+.tweet-footer {
   display: flex;
-  align-items: center;
-  padding-right: 1em;
-  padding-top: 0.5em;
-  width: 100%;
   justify-content: space-between;
-  padding-bottom: 1em;
+  align-items: center;
+  padding: 0 17px 17px;
+  font-size: 18px;
+}
+.tweet-icons > * {
+  padding-left: 10px;
+  border: none; 
+  outline: none;
+  color: #4052A1;
+  transition: all 0.3s ease;
 }
 
-footer {
-  display: block;
-  flex-direction: column;
+i:hover,
+i:focus {
+  color: #C5CCE3;
+  cursor: pointer;
 }
 
-.icon-group {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.title {
-  padding-left: 15px;
-}
-
-img {
-  padding-left: 1em;
-}

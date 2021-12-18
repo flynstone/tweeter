@@ -1,0 +1,43 @@
+.tweet-error {
+  color: rgb(219, 29, 29);
+}
+
+.counter {
+  font-weight: bold;
+}
+
+.inline {
+  display: flex;
+  justify-content: space-between;
+}
+
+textarea {
+  height: 60px;
+  width: 100%;
+  font-size: 1.4rem;
+  display: block;
+  background-color: #f4f1ec;
+  margin: 1.2rem 0 1.2rem 0;
+}
+
+.tweet-submit {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-btn {
+  position: relative;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 0 8px #d9d4e7;
+  width: 100px;
+  height: 45px;
+  background-color: #d9d4e7;
+  animation-duration: 5s;
+}
+
+.tweet-btn:hover{
+  position: relative;
+  background-color: #b873e6;
+  box-shadow: 3px 5px 8px #d9d4e7;
+}
